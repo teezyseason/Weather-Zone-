@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Weather Zone - Weather App</title>
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="/img/high-temperature.png">
+    <!--RemixIcons icons-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,400;1,500;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+      <div class="logo-container">
+          <img src="img/high-temperature.png" class="logo-img" alt="logo">
+          <h1> Weather Zone </h1>
+      </div>
+      <br/>
+    <div class="container">
+      <div class="search-container">
+        <i class="ri-map-pin-2-fill"></i>
+        <input type="text" placeholder="Your location..." />
+        <button class="search-button"><i class="ri-search-line"></i></i></button>
+      </div>
+
+      <div class="not-found">
+        <img src="img/notfoundtherm.jpg" alt="Not found" />
+        <p>Sorry no data found</p>
+        <p class="nf-small-text">Check your location, the value entered may be invalid.</p>
+      </div>
+      <!--Weather box-->
+      <div class="weather-container">
+        <img src=""/>
+        <p class="temperature"></p>
+        <p class="description"></p>
+      </div>
+
+      <div class="weather-details">
+        <div class="humidity">
+          <i class="ri-rainy-line"></i>
+          <div class="text">
+            <span></span>
+            <p>Humidity</p>
+          </div>
+        </div>
+        <div class="wind">
+          <i class="ri-windy-line"></i>
+          <div class="text">
+            <span></span>
+            <p>Wind Speed</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="footer-container">
+        <p>by <a href="https://gausabner.netlify.app/" target="_blank">Hosea Hango </a></p>
+    </div>
+    <div>
+     <div class="wave"></div>
+     <div class="wave"></div>
+     <div class="wave"></div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

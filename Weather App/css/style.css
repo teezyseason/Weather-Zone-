@@ -1,0 +1,347 @@
+:root {
+  --purple-color: #48466d;
+  --dark-grey-color: #333333;
+  --dark-blue-color: #06283d;
+  --blue-color: #3d84a8;
+  --baby-blue-color: #46cdcf;
+  --light-blue-color: #abedd8;
+  --lighter-blue-color: #deeff7;
+  --lightest-blue-color: #effaff;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  overflow: auto;
+}
+
+/*Animated Background*/
+body {
+  background: var(--baby-blue-color);
+  background: linear-gradient(0deg, rgba(0, 0, 200, 0.2), rgba(0, 0, 200, 0));
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+}
+
+.background {
+  background: var(--baby-blue-color);
+  background: linear-gradient(
+    120deg,
+    rgba(50, 150, 100, 0.2),
+    rgba(0, 0, 100, 0)
+  );
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.wave {
+  background: rgb(255 255 255 / 25%);
+  border-radius: 1000% 1000% 0 0;
+  position: fixed;
+  width: 200%;
+  height: 12em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  2% {
+    transform: translateX(1);
+  }
+
+  25% {
+    transform: translateX(-25%);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  75% {
+    transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(1);
+  }
+}
+/**/
+
+.container {
+  margin: 20px;
+  position: relative;
+  width: 400px;
+  height: 105px;
+  background: var(--white);
+  padding: 28px 32px;
+  overflow: hidden;
+  border-radius: 18px;
+  font-family: 'Roboto', sans-serif;
+  transition: 0.5s ease-out;
+  box-shadow: 9px 7px 40px -6px rgba(0, 0, 0, 0.25);
+}
+
+.logo-container {
+  margin: 50px;
+  position: relative;
+  display: inline-flex;
+  align-content: center;
+  align-self: center;
+  width: 400px;
+  height: 105px;
+  background: none;
+  padding: 28px 32px;
+  overflow: hidden;
+  border-radius: 18px;
+  font-family: 'Roboto', sans-serif;
+  transition: 0.6s ease-out;
+}
+
+.logo-container .logo-img {
+  margin: 20px;
+  width: 50px;
+  height: 50px;
+}
+
+.logo-container h1 {
+  align-self: center;
+  padding-top: 2.5rem;
+}
+
+.search-container {
+  width: 100%;
+  height: min-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-container input {
+  color: var(--dark-blue-color);
+  width: 80%;
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-left: 32px;
+  background-color: #ffffff00;
+}
+
+.search-container input::placeholder {
+  color: var(--dark-blue-color);
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.search-container button {
+  padding-top: 1%;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  align-content: center;
+  font-size: 15px;
+  color: var(--dark-blue-color);
+  border-radius: 50%;
+  background: var(--lighter-blue-color);
+  transition: 0.3 ease;
+}
+
+.search-container button:hover {
+  color: var(--white);
+  background: var(--dark-blue-color);
+  transition: 0.2s ease-in-out;
+}
+
+.search-container .ri-map-pin-2-fill {
+  position: absolute;
+  font-size: 30px;
+  color: var(--dark-blue-color);
+}
+
+.weather-container {
+  text-align: center;
+}
+
+.weather-container img {
+  width: 20%;
+  margin-top: 20px;
+}
+
+.weather-container .temperature {
+  position: relative;
+  color: var(--dark-blue-color);
+  font-size: 3rem;
+  font-weight: 800;
+  margin-top: 5px;
+  margin-left: -16px;
+}
+
+.weather-container .temperature span {
+  position: absolute;
+  font-size: 1.5rem;
+  margin-left: 4px;
+}
+
+.weather-container .description {
+  color: var(--dark-blue-color);
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.weather-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.weather-details .humidity,
+.weather-details .wind {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100px;
+}
+
+.weather-details .humidity {
+  padding-left: 20px;
+  justify-content: flex-start;
+}
+
+.weather-details .wind {
+  padding-left: 20px;
+  justify-content: flex-end;
+}
+
+.weather-details i {
+  color: var(--dark-blue-color);
+  font-size: 26px;
+  margin-right: 10px;
+  margin-top: 4px;
+}
+
+.weather-details span {
+  color: var(--dark-blue-color);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.weather-details p {
+  color: var(--dark-blue-color);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.not-found {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  scale: 0;
+  opacity: 0;
+  display: none;
+}
+
+.not-found img {
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+.not-found p {
+  color: var(--dark-blue-color);
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.not-found .nf-small-text {
+  color: var(--dark-blue-color);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.weather-container,
+.weather-details {
+  scale: 0;
+  opacity: 0;
+}
+
+.footer-container {
+  left: 9rem;
+  position: relative;
+  display: flex;
+  align-content: center;
+  align-self: center;
+  background: none;
+  padding: 28px 32px;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  transition: 0.6s ease-out;
+}
+
+.footer-container p {
+  color: var(--dark-blue-color);
+}
+
+.footer-container p a {
+  text-decoration: none;
+  align-content: center;
+  align-self: center;
+  color: var(--dark-blue-color);
+}
+
+.footer-container p a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--dark-blue-color);
+  text-decoration-thickness: 2px;
+}
+
+.fadeIn {
+  animation: 0.5s fadeIn forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
